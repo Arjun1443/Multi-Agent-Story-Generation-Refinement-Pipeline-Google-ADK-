@@ -1,99 +1,39 @@
-# Multi-Agent Story Generation & Refinement Pipeline (Google ADK)
+# Multi-Agent Story Generation and Refinement
 
-This repository contains an end-to-end implementation of a **multi-agent LLM workflow** using the **Google Agent Development Kit (ADK)**. The notebook demonstrates how to build, chain, and refine AI agents to generate higher-quality stories through iterative critique and improvement.
+A Google ADK notebook organizing story creation into generator, critic, and refiner stages.
 
----
+## Why this project matters
 
-## 🚀 Highlights
+Separating generation and critique illustrates how agent orchestration can structure a creative workflow and make intermediate outputs inspectable.
 
-### ✔️ Environment Setup
+## Technical focus
 
-* Installed and configured **google-adk**
-* Loaded essential Python libraries (NumPy, Pandas)
-* Managed secrets securely using **Kaggle Secrets**
+Python · Google ADK · sequential orchestration · iterative refinement · in-memory execution
 
-### ✔️ Custom Agent Implementations
+## Explore the implementation
 
-The notebook defines multiple intelligent agents using ADK:
+Open [the notebook](<Multi-Agent Story Generation & Refinement Pipeline (Google ADK).ipynb>) to inspect preprocessing, implementation, and saved outputs.
 
-* **Story Generator** – Produces the initial story from a prompt
-* **Critic Agent** – Evaluates the story and provides refinement notes
-* **Refiner Agent** – Improves the story based on critic feedback
-* **BaseAgent** – Shared reusable logic for agent behaviors
+## Run locally
 
-### ✔️ Loop-Based Refinement
-
-A **LoopAgent** performs iterative improvement cycles:
-**Critic → Refiner → Improved Story**
-This ensures the final output is more coherent, polished, and creative.
-
-### ✔️ Sequential Workflow
-
-A **SequentialAgent** is built to connect all stages into a single automated pipeline:
-
-1. Story generation
-2. Critique + refinement loop
-3. Final enhanced narrative
-
-### ✔️ In-Memory Debug Runner
-
-The notebook uses:
-`InMemoryRunner(agent=root_agent).run_debug(...)`
-to execute the full pipeline with detailed reasoning traces.
-
----
-
-## 📂 Project Structure
-
-```
-/addk-1.ipynb     # Complete implementation of all agents and workflows
+```bash
+git clone https://github.com/Arjun1443/Multi-Agent-Story-Generation-Refinement-Pipeline-Google-ADK-.git
+cd Multi-Agent-Story-Generation-Refinement-Pipeline-Google-ADK-
+python -m venv .venv
+# Activate .venv before continuing.
+python -m pip install google-adk google-genai jupyter
+python -m jupyter notebook
 ```
 
----
+Select `Multi-Agent Story Generation & Refinement Pipeline (Google ADK).ipynb` in Jupyter and review its configuration before executing cells in order.
 
-## 🧠 What the Notebook Solves
+## Reproducibility notes
 
-* How to build custom agents with Google ADK
-* How to chain multiple agents into a workflow
-* How to design an iterative refinement loop
-* How to securely load API keys inside Kaggle
-* How to run and debug an agent pipeline end-to-end
-* How to generate improved stories using LLM feedback cycles
+Configure the Google API key through the notebook's Kaggle Secrets setup, or adapt that cell for environment variables in local Jupyter. Review the loop limit and prompt before running. Multiple agent calls can increase API usage. Improvements in story quality are subjective and should be assessed against explicit criteria.
 
----
+Saved notebook outputs describe a prior execution; they are not an independently reproduced benchmark. Dependency versions are not locked, so compatibility may require adjustment.
 
-## 📝 How to Use
 
-1. Open the notebook in Kaggle / Jupyter
-2. Add your API key to Kaggle Secrets
-3. Run all cells sequentially
-4. Modify the prompt inside:
+## Author
 
-```python
-runner.run_debug("Your story prompt here")
-```
-
-5. View the generated story, critic feedback, and refined final version.
-
----
-
-## 📌 Example Prompt Used
-
-> “Write a short story about a lighthouse keeper who discovers a mysterious glowing map.”
-
-The system processes the prompt through the agent pipeline and outputs an improved, multi-stage refined story.
-
----
-
-## 🔧 Future Enhancements
-
-* Add domain-specific critic agents (mystery, sci-fi, fantasy)
-* Add style transfer agents
-* Export final outputs into files
-* Build REST API / web UI on top of the pipeline
-
----
-
-## 📜 License
-
-Open for personal and academic use.
+[Naga Anweesh Reddy](https://github.com/Arjun1443/Naga-Anweesh-Reddy) · AI development and technical training
