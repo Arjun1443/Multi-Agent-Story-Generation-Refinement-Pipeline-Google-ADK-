@@ -1,5 +1,19 @@
 # Multi-Agent Story Generation and Refinement
 
+## Interactive Streamlit app
+
+A companion application is available in [streamlit_app/app.py](streamlit_app/app.py).
+
+```bash
+python -m pip install -r streamlit_app/requirements.txt
+python -m streamlit run streamlit_app/app.py
+```
+
+Live story generation requires a valid Google API key and an available Gemini model. API calls were not exercised locally.
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for Community Cloud setup, validation coverage, and runtime requirements. A live deployment is not yet confirmed.
+
+
 A Google ADK notebook organizing story creation into generator, critic, and refiner stages.
 
 ## Why this project matters
