@@ -1,0 +1,1 @@
+"""FastAPI story generation companion."""
