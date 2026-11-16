@@ -1,5 +1,11 @@
 # Multi-Agent Story Generation and Refinement
 
+## FastAPI application
+
+Run the story writer, critic, and refinement workflow through a browser interface or REST API. Includes Swagger docs, editorial history, Markdown download, validation, tests, and a Dockerfile.
+
+See [FASTAPI.md](FASTAPI.md) for installation, configuration, API examples, and verification notes.
+
 ## Interactive Streamlit app
 
 A companion application is available in [streamlit_app/app.py](streamlit_app/app.py).
